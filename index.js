@@ -9,3 +9,9 @@ function repeat(arr= [], repeatNumber = 3) {
     return result;
   }
 }
+
+function reformat(str = '') {
+  if (str == '') return '';
+  var strWithoutVowels = str.replace(/[aeiou]/ig,'');
+  return strWithoutVowels.charAt(0).toUpperCase() + strWithoutVowels.slice(1).toLowerCase();
+}
