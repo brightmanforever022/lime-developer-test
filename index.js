@@ -15,3 +15,9 @@ function reformat(str = '') {
   var strWithoutVowels = str.replace(/[aeiou]/ig,'');
   return strWithoutVowels.charAt(0).toUpperCase() + strWithoutVowels.slice(1).toLowerCase();
 }
+
+function next_binary_number(binaryArr = [0]) {
+  const nextVal = parseInt(binaryArr.join(''), 2) + 1;
+  const nextBinaryStr = (nextVal >>> 0).toString(2);
+  return [...nextBinaryStr].join(',');
+}
